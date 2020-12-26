@@ -11,6 +11,7 @@ steps:
 - task: Docker@2
   displayName: Build an image
   inputs:
-    repository: $(imageName)
+    containerRegistry: 'SSTestACR'
+    repository: 'JSTest'
     command: build
     Dockerfile: app/Dockerfile
